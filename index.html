@@ -87,6 +87,19 @@
   svg path:hover {
     fill: #5b8def;
   }
+  #janeladownloads {
+    width: 200px;
+    height: 200px;
+    transform: translate(-50%, -50%);
+  }
+  #janeladownloads a {
+    color: #000000;
+    text-decoration: none
+    }
+  #janeladownloads a:hover {
+    color: #5b8def;
+  }
+  
 </style>
 </head>
 <body>
@@ -114,6 +127,10 @@
     <p>banana remove nome-do-pacote</p>
     <p>Lembre de trocar o nome-do-pacote pelo pacote que você vai instalar/remover.</p>
   </main>
+  <div id="janeladownloads">
+    <h2>Downloads</h2>
+    <a href="bananalinuxiso.iso">Baixar iso</a>
+  </div>
   <img src="teladobananalinux.png">
   <script>
     const menubutton = document.getElementById("menu")
