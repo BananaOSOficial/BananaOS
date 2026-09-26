@@ -24,6 +24,20 @@
   #banana {
     color: #F7D117;
   }
+  .janelamenu {
+    display: none;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    border: 2px solid #F5F5F5;
+  }
+  .janelamenu button {
+    background: #FFFFFF;
+    border-radius: 20px;
+    border: 2px solid #F5F5F5;
+  }
+  .janelamenu button:hover {
+    background-color: #F5F5F5;
+  }
   #Linux {
     color: #5b8def;
     text-shadow: 1px 1px blue,
@@ -55,12 +69,15 @@
 </head>
 <body>
   <header>
-    <div id="logoebotaodomenu">
+    <div id="logoebotaodomenuejanela">
       <button id="menu">
 <svg width="800px" height="800px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none">
   <path fill="#000000" fill-rule="evenodd" d="M19 4a1 1 0 01-1 1H2a1 1 0 010-2h16a1 1 0 011 1zm0 6a1 1 0 01-1 1H2a1 1 0 110-2h16a1 1 0 011 1zm-1 7a1 1 0 100-2H2a1 1 0 100 2h16z"/>
 </svg>
       </button>
+      <div class="janelamenu">
+        <button class="downloadsbutton">Downloads</button>
+      </div>
       <h1 id="banana">Banana</h1>
       <h1 id="Linux">Linux</h1>
     </div>
@@ -73,7 +90,14 @@
     <p>banana install nome-do-pacote</p>
     <p>Se você quiser remover algum pacote AUR:</p>
     <p>banana remove nome-do-pacote</p>
-    <p>Lembre de trocar o nome-do-pacote pelo pacote que você vai instalar/remover</p>
+    <p>Lembre de trocar o nome-do-pacote pelo pacote que você vai instalar/remover.</p>
   </main>
+  <script>
+    const menubutton = document.GetElementById("menu")
+    const menu = document.querySelector("janelamenu")
+    menubutton.onClick = function() {
+    menu.style.display = 'block'
+    }
+  </script>
 </body>
 </html>
