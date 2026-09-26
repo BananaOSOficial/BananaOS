@@ -88,7 +88,9 @@
     fill: #5b8def;
   }
   #janeladownloads {
+    display: none;
     width: 200px;
+    position: fixed;
     height: 200px;
     transform: translate(-50%, -50%);
   }
@@ -99,7 +101,13 @@
   #janeladownloads a:hover {
     color: #5b8def;
   }
-  
+  #janeladownloads button {
+    background-color: transparent;
+    border: none;
+  }
+  #janeladownloads button:hover {
+    color: #5b8def;
+  }
 </style>
 </head>
 <body>
@@ -128,19 +136,29 @@
     <p>Lembre de trocar o nome-do-pacote pelo pacote que você vai instalar/remover.</p>
   </main>
   <div id="janeladownloads">
+    <button id="fecharjaneladownload">X</button>
     <h2>Downloads</h2>
     <a href="bananalinuxiso.iso">Baixar iso</a>
   </div>
   <img src="teladobananalinux.png">
   <script>
-    const menubutton = document.getElementById("menu")
-    const menu = document.querySelector(".janelamenu")
+    const menubutton = document.getElementById("menu");
+    const menu = document.querySelector(".janelamenu");
     menubutton.onclick = function() {
     if (menu.style.display == 'none' || menu.style.display == '') {
     menu.style.display = 'block';
     } else {
     menu.style.display = 'none';
     }
+    }
+    const janeladownloads = document.getElementById("janeladownloads");
+    const downloadsbutton = document.querySelector(".downloadsbutton");
+    const fecharjaneladownload = document.getElementById("fecharjaneladownload");
+    downloadsbutton.onclick = function() {
+    janeladownloads.style.display = 'block';
+    }
+    fecharjaneladownload.onclick = function() {
+      janeladownloads.style.display = 'none';
     }
   </script>
 </body>
